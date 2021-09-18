@@ -5,23 +5,7 @@ Alexa Smart Home Skill HTTP Sensor
 HTTPリクエストをトリガーに、Alexaの定型アクションを実行するためのコンタクトセンサーです。  
 利用には、[alexa-skill-endpoint-http-sensor](https://github.com/nana4rider/alexa-skill-endpoint-http-sensor)を自身のサーバーに設置する必要があります。
 
-```mermaid
-sequenceDiagram
-  participant cl as クライアント
-  participant ep as HTTPサーバー
-  participant ax as Alexa
-  participant lm as AWS Lambda
-
-  Note over ax, lm: Alexa Discover
-  ax ->> lm : Discover
-  lm -->> ax : Discover.Response
-
-  cl ->> ep : HTTP Request
-  Note over ep, ax: Alexa Event Gateway
-  ep ->> ax : HTTP Request
-  ax -->> ep : HTTP Response
-  ep -->> cl : HTTP Response
-```
+フローの詳細は[alexa-skill-endpoint-http-sensor](https://github.com/nana4rider/alexa-skill-endpoint-http-sensor)を参照してください。
 
 ## 初期設定
 ### AWS CLIのインストール
